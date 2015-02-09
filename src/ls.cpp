@@ -218,8 +218,7 @@ void R_flag(vector<string> &file, string path, bool flagA, bool flagL)
 				perror("readdir failed");
 				exit(1);
 			}
-			string s = direntp->d_name;
-			file.push_back(s);
+			file.push_back(direntp->d_name);
 		}
 		if(closedir(dirp) == -1)
 		{
